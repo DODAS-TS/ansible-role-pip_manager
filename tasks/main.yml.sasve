@@ -1,0 +1,8 @@
+- name: create/update file /etc/cvmfs/default.local
+  blockinfile:
+    dest: /etc/cvmfs/default.local
+    create: yes
+    content: |
+      CVMFS_HTTP_PROXY=DIRECT
+      CVMFS_REPOSITORIES="{% for item in cvmfs_repositories %}{{item}}{% if not loop.last %},{% endif %}{% endfor %}" 
+

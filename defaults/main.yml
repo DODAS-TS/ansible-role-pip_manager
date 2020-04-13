@@ -1,0 +1,14 @@
+
+pip_package: python3-pip
+
+pip_exec: "{{ 'pip3' if pip_package.startswith('python3') else 'pip' }}"
+
+packages: []
+#packages: [{ name: keras },{ name: tensorflow },{ name: matplotlib },{ name: scikit-learn },{ name: numpy },{ name: torch}, { name: uproot  }]
+
+#      { name: matplotlib, version:  , state: ,  },
+#      { name: scikit-learn, version: , state: ,  },
+#      { name: numpy, version: , state: ,  },
+#      { name: torch, version: , state: ,  },
+#      { name: uproot, version: , state: ,  }]
+
